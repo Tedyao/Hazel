@@ -96,6 +96,14 @@ project "Sandbox"
 
 	filter "system:windows"
 		systemversion "latest"
+
+		defines
+		{
+			"HZ_PLATFORM_WINDOWS"
+		}
+
+	filter "system:windows"
+		systemversion "latest"
 		
 	filter "configurations:Debug"
 		defines "HZ_DEBUG"
