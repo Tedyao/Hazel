@@ -1,7 +1,8 @@
+#pragma once
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
-#include <memory>
+
 
 namespace Hazel {
 	class HAZEL_API Log
@@ -15,8 +16,6 @@ namespace Hazel {
 		static std::shared_ptr<spdlog::logger> Hazel::Log::s_ClientLogger;
 	};
 }
-
-
 
 #define HZ_CORE_TRACE(...) ::Hazel::Log::getCoreLogger()->trace(__VA_ARGS__)
 #define HZ_CORE_INFO(...)  ::Hazel::Log::getCoreLogger()->info(__VA_ARGS__)

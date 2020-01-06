@@ -40,6 +40,11 @@
     <ClInclude Include="src\Hazel\Logging.h">
       <Filter>Hazel</Filter>
     </ClInclude>
+    <ClInclude Include="src\hzpch.h" />
+    <ClInclude Include="src\Hazel\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Hazel\Layer.h" />
+    <ClInclude Include="src\Hazel\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazel\Application.cpp">
@@ -48,5 +53,10 @@
     <ClCompile Include="src\Hazel\Log.cpp">
       <Filter>Hazel</Filter>
     </ClCompile>
+    <ClCompile Include="src\hzpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Hazel\Window.cpp" />
+    <ClCompile Include="src\Hazel\Layer.cpp" />
+    <ClCompile Include="src\Hazel\LayerStack.cpp" />
   </ItemGroup>
 </Project>

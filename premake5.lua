@@ -11,6 +11,13 @@ workspace "Hazel"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Hazel/vendor/GLFW/include"
+
+include "Hazel/vendor/GLFW"
+-- Include the premake5.lua file in this script, basically copying and pasting. just like the include in C++
+
+
 
 project "Hazel"
 	location "Hazel"
@@ -19,6 +26,9 @@ project "Hazel"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "hzpch.h"
+	pchsource "Hazel/src/hzpch.cpp"
 
 	files
 	{
@@ -35,6 +45,13 @@ project "Hazel"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 
@@ -54,7 +71,11 @@ project "Hazel"
 		}
 
 	filter "configurations:Debug"
-		defines "HZ_DEBUG"
+		defines 
+		{
+			"HZ_DEBUG"
+			"HZ_ENABLE_ASSERT"
+		}
 		runtime "Debug"
 		symbols "on"
 
