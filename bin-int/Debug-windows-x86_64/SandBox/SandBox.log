@@ -1,4 +1,6 @@
 ﻿  SandBoxApp.cpp
+D:\Dev\Hazel\Hazel\src\Hazel\Events\ApplicationEvent.h(21,36): warning C4244:  “return”: 从“unsigned int”转换到“float”，可能丢失数据
+D:\Dev\Hazel\Hazel\src\Hazel\Events\ApplicationEvent.h(22,37): warning C4244:  “return”: 从“unsigned int”转换到“float”，可能丢失数据
 D:\Dev\Hazel\Hazel\src\Hazel\Layer.h(17,26): warning C4251:  “Hazel::Layer::m_DebugName”: class“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口由 class“Hazel::Layer”的客户端使用
 D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.21.27702\include\xstring(4231): message :  参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
 D:\Dev\Hazel\Hazel\src\Hazel\LayerStack.h(18,25): warning C4251:  “Hazel::LayerStack::m_insertLayer”: class“std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>”需要有 dll 接口由 class“Hazel::LayerStack”的客户端使用
@@ -25,14 +27,14 @@ D:\Dev\Hazel\Hazel\src\Hazel\Log.h(15,66): warning C4251:  “Hazel::Log::s_Core
 D:\Dev\Hazel\Hazel\vendor\spdlog\include\spdlog\details\registry.h(33): message :  参见“std::shared_ptr<spdlog::logger>”的声明
 D:\Dev\Hazel\Hazel\src\Hazel\Log.h(16,68): warning C4251:  “Hazel::Log::s_ClientLogger”: class“std::shared_ptr<spdlog::logger>”需要有 dll 接口由 class“Hazel::Log”的客户端使用
 D:\Dev\Hazel\Hazel\vendor\spdlog\include\spdlog\details\registry.h(33): message :  参见“std::shared_ptr<spdlog::logger>”的声明
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24,35): warning C4251:  “Hazel::Application::m_Window”: class“std::unique_ptr<Hazel::Window,std::default_delete<_Ty>>”需要有 dll 接口由 class“Hazel::Application”的客户端使用
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24,35): warning C4251:         with
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24,35): warning C4251:         [
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24,35): warning C4251:             _Ty=Hazel::Window
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24,35): warning C4251:         ]
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24): message :  参见“std::unique_ptr<Hazel::Window,std::default_delete<_Ty>>”的声明
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24): message :         with
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24): message :         [
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24): message :             _Ty=Hazel::Window
-D:\Dev\Hazel\Hazel\src\Hazel\Application.h(24): message :         ]
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29,35): warning C4251:  “Hazel::Application::m_Window”: class“std::unique_ptr<Hazel::Window,std::default_delete<_Ty>>”需要有 dll 接口由 class“Hazel::Application”的客户端使用
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29,35): warning C4251:         with
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29,35): warning C4251:         [
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29,35): warning C4251:             _Ty=Hazel::Window
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29,35): warning C4251:         ]
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29): message :  参见“std::unique_ptr<Hazel::Window,std::default_delete<_Ty>>”的声明
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29): message :         with
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29): message :         [
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29): message :             _Ty=Hazel::Window
+D:\Dev\Hazel\Hazel\src\Hazel\Application.h(29): message :         ]
   Sandbox.vcxproj -> D:\Dev\Hazel\Sandbox\..\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe

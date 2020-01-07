@@ -7,6 +7,7 @@
 #include "Hazel/Events/MouseEvent.h"
 #include "Hazel/Events/KeyEvent.h"
 #include "Hazel/Log.h"
+#include <Glad/glad.h>
 
 
 namespace Hazel {
@@ -25,6 +26,8 @@ namespace Hazel {
 		inline void setEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		void setVSync(bool enabled) override;
 		bool isVSysn() const override;
+
+		virtual void* getNativeWindow() const override;
 
 	private:
 		virtual void Init(const WindowProps props);

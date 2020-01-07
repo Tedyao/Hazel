@@ -20,6 +20,8 @@
 
 #endif
 
+#define HZ_BIND_EVENT_CALLBACK_FN(x) std::bind(&x, this, std::placeholders::_1)
+
 #define BIT(X) (1 << X)
 //
 

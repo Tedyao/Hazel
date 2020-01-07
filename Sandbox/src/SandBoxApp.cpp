@@ -20,7 +20,7 @@ public:
 
 	void onUpdate() override
 	{
-		HZ_INFO("{0} layer updated.", getName());
+		//HZ_INFO("{0} layer updated.", getName());
 	}
 };
 
@@ -32,8 +32,7 @@ public:
 	SandBox()
 	{
 		pushLayer(new ExampleLayer("layer1"));
-		pushLayer(new ExampleLayer("layer2"));
-		pushOverlay(new ExampleLayer("Overlay1"));
+		pushOverlay(new Hazel::ImGuiLayer());
 		
 	}
 	~SandBox()

@@ -7,6 +7,7 @@
 #include "LayerStack.h"
 #include "Hazel/Log.h"
 #include <gl/GL.h>
+#include "Hazel/Input.h"
 
 
 namespace Hazel {
@@ -20,7 +21,11 @@ namespace Hazel {
 		void onEvent(Event& event);
 		void pushLayer(Layer* layer);
 		void pushOverlay(Layer* layer);
+		inline Window& getWindow() { return *m_Window; }
+		inline static Application& getInstance() { return *s_Instance; }
+
 	private:
+		static Application* s_Instance;
 		std::unique_ptr<Window> m_Window;
 		LayerStack m_Layers;
 		bool m_Running = true;

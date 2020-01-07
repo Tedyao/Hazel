@@ -49,6 +49,11 @@ namespace Hazel {
 		return m_Data.vSync;
 	}
 
+	void* WindowsWindow::getNativeWindow() const
+	{
+		return m_Window;
+	}
+
 	void WindowsWindow::Init(const WindowProps props)
 	{
 		m_Data.Height = props.Height;
@@ -65,6 +70,10 @@ namespace Hazel {
 		}
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		HZ_CORE_ASSERT(status, "Failed to initialize glad.");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		setVSync(true);
 
@@ -119,9 +128,18 @@ namespace Hazel {
 				}
 			});
 
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode)
+			{
+				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+				KeyTypedEvent event(keycode);
+				data.EventCallback(event);
+			});
+
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
 			{
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+				//remember to write BREAK; at the end of every option!!!!!!!!!!!!!!
 
 				switch (action)
 				{
@@ -129,11 +147,13 @@ namespace Hazel {
 					{
 						MouseButtonPressedEvent event(button);
 						data.EventCallback(event);
+						break;
 					}
 					case GLFW_RELEASE:
 					{
 						MouseButtonReleasedEvent event(button);
 						data.EventCallback(event);
+						break;
 					}
 					default:
 						break;

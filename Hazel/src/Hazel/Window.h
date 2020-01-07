@@ -37,6 +37,7 @@ namespace Hazel{
 		virtual void setEventCallback(const EventCallbackFn& callback) = 0;
 		virtual void setVSync(bool enabled) = 0;
 		virtual bool isVSysn() const = 0;
+		virtual void* getNativeWindow() const = 0;
 		static Window* Create(const WindowProps& props = WindowProps());
 
 	};

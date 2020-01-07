@@ -19,11 +19,14 @@ namespace Hazel {
 	void LayerStack::pushLayer(Layer* layer)
 	{
 		m_insertLayer = m_Layers.emplace(m_insertLayer, layer);
+		layer->onAttach();
 	}
 
 	void LayerStack::pushOverlay(Layer* layer)
 	{
 		m_Layers.emplace_back(layer);
+		layer->onAttach();
+
 	}
 
 	void LayerStack::popLayer(Layer* layer)

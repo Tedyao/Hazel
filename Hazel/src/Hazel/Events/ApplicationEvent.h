@@ -18,6 +18,10 @@ namespace Hazel {
 
 		}
 
+		inline float getWidth() { return m_Width; }
+		inline float getHeight() { return m_Height; }
+
+
 		std::string toString() const override
 		{
 			std::stringstream ss;
