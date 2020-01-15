@@ -15,7 +15,7 @@ namespace Hazel {
 		inline ITERATOR begin() { return m_Layers.begin(); }
 		inline ITERATOR end() { return m_Layers.end(); }
 	private:
-		ITERATOR m_insertLayer;
+		unsigned int m_insertLayer;
 		std::vector<Layer*> m_Layers;
 
 

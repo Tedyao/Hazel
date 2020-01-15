@@ -7,8 +7,8 @@
 #include "Hazel/Events/MouseEvent.h"
 #include "Hazel/Events/KeyEvent.h"
 #include "Hazel/Log.h"
-#include <Glad/glad.h>
-
+#include "Platform/OpenGL/OpenGLContext.h"
+#include "Hazel/Renderer/GraphicsContext.h"
 
 namespace Hazel {
 	class WindowsWindow
@@ -47,5 +47,6 @@ namespace Hazel {
 
 		};
 		WindowData m_Data;
+		GraphicsContext* m_Context;
 	};
 }
