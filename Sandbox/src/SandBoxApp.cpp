@@ -1,7 +1,6 @@
 #include "Hazel.h"
-#include "glm.hpp"
-#include "gtc/type_ptr.hpp"
-#include "imgui/imgui.h"
+#include "Hazel/Core/EntryPoint.h"
+#include "Sandbox2D.h"
 
 class ExampleLayer
 	:public Hazel::Layer
@@ -30,11 +29,11 @@ public:
 		Hazel::Ref<Hazel::VertexBuffer> vertexBuffer;
 		Hazel::Ref<Hazel::IndexBuffer> indexBuffer;
 
-		indexBuffer.reset(Hazel::IndexBuffer::Create(indices, sizeof(indices) / sizeof(unsigned int)));
-		vertexBuffer.reset(Hazel::VertexBuffer::Create(vertices, sizeof(vertices)));
+		indexBuffer = Hazel::IndexBuffer::Create(indices, sizeof(indices) / sizeof(unsigned int));
+		vertexBuffer = Hazel::VertexBuffer::Create(vertices, sizeof(vertices));
 
 		vertexBuffer->setLayout(layout);
-		m_VertexArray.reset(Hazel::VertexArray::CreateVertexArray());
+		m_VertexArray = Hazel::VertexArray::CreateVertexArray();
 		m_VertexArray->addVertexBuffer(vertexBuffer);
 		m_VertexArray->setIndexBuffer(indexBuffer);
 	
@@ -182,7 +181,8 @@ class SandBox
 public:
 	SandBox()
 	{
-		pushLayer(new ExampleLayer("layer1"));
+		//pushLayer(new ExampleLayer("layer1"));
+		pushLayer(new Sandbox2D());
 		
 	}
 	~SandBox()

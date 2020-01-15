@@ -4,7 +4,7 @@
 
 namespace Hazel {
 	
-	SceneData* Renderer::data = new SceneData();
+	Scope<SceneData> Renderer::data = std::make_unique<SceneData>();
 
 	void Renderer::Init()
 	{

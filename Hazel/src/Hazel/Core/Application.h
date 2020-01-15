@@ -12,6 +12,7 @@
 #include "Hazel/Renderer/Shader.h"
 #include "Hazel/Renderer/VertexArray.h"
 #include "Hazel/Renderer/Renderer.h"
+#include "Hazel/Renderer/Renderer2D.h"
 #include "Hazel/Core/TimeStep.h"
 
 namespace Hazel {

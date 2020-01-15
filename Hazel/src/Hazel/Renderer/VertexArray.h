@@ -14,7 +14,7 @@ namespace Hazel {
 		virtual void setIndexBuffer(Ref<IndexBuffer>& indexBuffer) = 0;
 		virtual const std::vector<Ref<VertexBuffer>> getVertexBuffers() const = 0;
 		virtual const Ref<IndexBuffer> getIndexBuffer() const = 0;
-		static VertexArray* CreateVertexArray();
+		static Ref<VertexArray> CreateVertexArray();
 
 	};
 }

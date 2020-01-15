@@ -3,12 +3,14 @@
 #include "Hazel/Core/Application.h"
 #include "Hazel/Core/Layer.h"
 #include "Hazel/Core/Log.h"
+#include "Hazel/Core/TimeStep.h"
 #include "Hazel/ImGui/ImGuiLayer.h"
 #include "Platform/Windows/WindowsInput.h"
 #include "Hazel/ImGui/ImGuiLayer.h"
 #include "Hazel/Renderer/OrthographicCameraController.h"
 
 #include "Hazel/Renderer/Renderer.h"
+#include "Hazel/Renderer/Renderer2D.h"
 #include "Hazel/Renderer/RendererCommand.h"
 #include "Hazel/Renderer/OrthoGraphicCamera.h"
 
@@ -30,10 +32,6 @@
 
 #include "Hazel/Core/HazelKeycode.h"
 #include "Hazel/Core/HazelMouseBottonCode.h"
-
-//---------------EntryPoint--------------
-#include "Hazel/Core/EntryPoint.h"
-//---------------EntryPoint--------------
 
 //---------------Events------------------
 #include "Hazel/Events/KeyEvent.h"

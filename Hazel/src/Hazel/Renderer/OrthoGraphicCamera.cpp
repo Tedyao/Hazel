@@ -22,6 +22,12 @@ namespace Hazel {
 		m_ViewProjectionMatrx = m_ProjectionMatrix * m_ViewMatrix;
 	}
 
+	void OrthoGraphicCamera::setProjectMatrix(glm::mat4 projectMat)
+	{
+		m_ProjectionMatrix = projectMat;
+		m_ViewProjectionMatrx = m_ProjectionMatrix * m_ViewMatrix;
+	}
+
 	void OrthoGraphicCamera::calcViewProjectMatrix()
 	{
 		m_ViewMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(m_Position)) *

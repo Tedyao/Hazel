@@ -21,7 +21,7 @@ namespace Hazel {
 		static void endScene();
 		static void submit(Ref<Shader>& shader, Ref<VertexArray>& vertexArray, glm::mat4 transform);
 	private:
-		static SceneData* data;
+		static Scope<SceneData> data;
 	};
 
 
