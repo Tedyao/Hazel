@@ -1,6 +1,6 @@
 #include "hzpch.h"
 #include "Camera.h"
-#include "Hazel/Log.h"
+#include "Hazel/Core/Log.h"
 #include "ext/matrix_clip_space.inl"
 #include "ext/matrix_transform.inl"
 namespace Hazel {

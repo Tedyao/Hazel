@@ -1,10 +1,9 @@
 #include "hzpch.h"
 #include "Shader.h"
-#include "Hazel/Log.h"
+#include "Hazel/Core/Log.h"
 #include "Glad/glad.h"
 #include "Hazel/Renderer/RendererAPI.h"
 #include "Platform/OpenGL/OpenGLShader.h"
-#include "Hazel/Log.h"
 namespace Hazel {
 	ShaderLibrary* ShaderLibrary::s_Instance = new ShaderLibrary();
 

@@ -1,8 +1,8 @@
 #pragma once
 #include <GLFW/glfw3.h>
 #include <Glad/glad.h>
-#include "Hazel/Core.h"
-#include "Hazel/Log.h"
+#include "Hazel/Core/Core.h"
+#include "Hazel/Core/Log.h"
 #include "Hazel/Renderer/GraphicsContext.h"
 
 struct GLFWwindow;

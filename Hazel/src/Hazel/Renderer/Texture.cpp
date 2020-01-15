@@ -1,6 +1,6 @@
 #include "hzpch.h"
 #include "RendererAPI.h"
-#include "Hazel/Log.h"
+#include "Hazel/Core/Log.h"
 #include "Texture.h"
 #include "Platform/OpenGL/OpenGLTexture2D.h"
 

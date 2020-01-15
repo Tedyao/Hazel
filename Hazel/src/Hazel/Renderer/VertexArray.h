@@ -1,5 +1,5 @@
 #pragma once
-#include "Hazel/Log.h"
+#include "Hazel/Core/Log.h"
 #include "Buffer.h"
 #include "Buffer.h"
 #include "VertexBufferLayout.h"

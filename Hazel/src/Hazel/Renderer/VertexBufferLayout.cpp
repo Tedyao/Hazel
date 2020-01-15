@@ -1,7 +1,7 @@
 #include "hzpch.h"
 #include "VertexBufferLayout.h"
 #include "Hazel/Renderer/Renderer.h"
-#include "Hazel/Log.h"
+#include "Hazel/Core/Log.h"
 #include "Platform/OpenGL/OpenGLVertexBufferLayout.h"
 
 namespace Hazel {

@@ -6,10 +6,10 @@
 #include "Hazel/Events/KeyEvent.h"
 #include "Hazel/Events/MouseEvent.h"
 #include "Hazel/Events/ApplicationEvent.h"
-#include "Hazel/Core.h"
-#include "Hazel/Input.h"
-#include "Hazel/HazelKeycode.h"
-#include "Hazel/HazelMouseBottonCode.h"
+#include "Hazel/Core/Core.h"
+#include "Hazel/Core/Input.h"
+#include "Hazel/Core/HazelKeycode.h"
+#include "Hazel/Core/HazelMouseBottonCode.h"
 #include "Hazel/Core/TimeStep.h"
 
 namespace Hazel {

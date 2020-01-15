@@ -1,8 +1,7 @@
 #pragma once
 #include "Hazel/Renderer/Texture.h"
-#include "Hazel/Core.h"
-#include "Hazel/Log.h"
-
+#include "Hazel/Core/Core.h"
+#include "Hazel/Core/Log.h"
 namespace Hazel {
 	class OpenGLTexture2D :public Texture2D
 	{
